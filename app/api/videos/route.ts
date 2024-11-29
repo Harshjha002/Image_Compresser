@@ -9,6 +9,7 @@ export async function GET(request: NextRequest) {
             orderBy: { createdAt: "desc" }
         })
         return NextResponse.json(videos)
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
         return NextResponse.json({ error: "Error fetching videos" }, { status: 500 })
     } finally {
